@@ -36,7 +36,7 @@ class Person extends React.Component {
     return (
       <article>
         <h3>{this.props.name}</h3>
-        <p>{this.state.waves} greetings</p>
+        <p>👋 {this.state.waves} greetings</p>
         <p onClick={this.greetPerson}>Say Hello!</p>
         <img
           src={this.props.imgURL}
