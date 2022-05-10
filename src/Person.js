@@ -2,8 +2,6 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import './Person.css';
 
-// let personNeedsHelp = true;
-
 class Person extends React.Component {
   constructor(props) {
     super(props);
