@@ -1,21 +1,21 @@
 import React from 'react';
 import Person from './Person.js';
-import data from './data.json';
 import './Main.css';
 
 class Main extends React.Component {
 
   render() {
 
-    let people = [];
-    data.forEach((pep, idx) => {
+    let people = this.props.data.map((pep, idx) => {
       // console.log(pep.imageURL);
-      people.push(
+      return (
         <Person 
           name={pep.name} 
           imgURL={pep.imageURL}
           key={idx}
           idx={idx}
+          addHearts={this.props.addHearts}
+          openModalHandler={this.props.openModalHandler}
         />)
     });
 

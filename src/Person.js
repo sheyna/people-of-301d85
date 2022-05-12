@@ -31,17 +31,26 @@ class Person extends React.Component {
     })
   }
 
+  handleNameClick = () => {
+    this.props.openModalHandler(this.props.name)
+  }
+
   render() {
     // console.log(this.props.idx)
     return (
       <article>
-        <h3>{this.props.name}</h3>
+        <h3 
+          onClick={this.handleNameClick}
+        >
+          {this.props.name}
+        </h3>
         <p>👋 {this.state.waves} greetings</p>
         <p onClick={this.greetPerson}>Say Hello!</p>
         <img
           src={this.props.imgURL}
           alt={this.props.name}
           title={this.props.name}
+          onClick={this.props.addHearts}
         />
         <div>{this.state.personNeedsHelp ? 'I need help' : ''}</div>
         <Button
